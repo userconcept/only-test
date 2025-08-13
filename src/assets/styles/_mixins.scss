@@ -1,0 +1,22 @@
+// Mixins:
+
+// Rems:
+
+@function rem($num) {
+    $strip-unit: calc($num / ($num * 0 + 1));
+    @return calc($strip-unit / 16 * 1rem);
+}
+
+// Media:
+
+@mixin media_1920_min_width {
+    @media (min-width: 1920px) {
+        @content;
+    }
+}
+
+@mixin media_1440_min_width {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}

@@ -1,0 +1,45 @@
+@use '../../assets/styles/mixins' as m;
+
+.ButtonArrow {
+    width: m.rem(25);
+    height: m.rem(25);
+    border: m.rem(1) solid rgba(var(--color-on-surface-rgb), .5);;
+    padding: 0;
+    font-family: inherit;
+    overflow: visible;
+    text-transform: none;
+    color: inherit;
+    background-color: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include m.media_1440_min_width {
+        width: m.rem(50);
+        height: m.rem(50);
+    }
+
+    svg {
+        display: block;
+        width: m.rem(8);
+        height: m.rem(8);
+        fill: currentColor;
+
+        @include m.media_1440_min_width {
+            width: m.rem(16);
+            height: m.rem(16);
+        }
+    }
+
+    &__text {
+        width: 1px;
+        height: 1px;
+        position: absolute;
+        overflow: hidden;
+        white-space: nowrap;
+        clip-path: inset(50%);
+    }
+}
+
+a.ButtonArrow {
+    text-decoration: none;
+}

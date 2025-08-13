@@ -1,0 +1,33 @@
+@use '../../assets/styles/mixins' as m;
+
+.Counter {
+
+    &__numbers {
+        font-size: m.rem(14);
+        margin-bottom: m.rem(6);
+
+        @include m.media_1440_min_width {
+            margin-bottom: m.rem(21);
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        gap: m.rem(8);
+
+        @include m.media_1440_min_width {
+            gap: m.rem(18);
+        }
+    }
+
+    &__ButtonArrow{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &_disabled {
+            opacity: .5;
+            cursor: default;
+        }
+    }
+}

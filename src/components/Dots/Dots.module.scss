@@ -1,0 +1,30 @@
+@use '../../assets/styles/mixins' as m;
+
+.Dots {
+    display: flex;
+    gap: m.rem(10);
+
+    &__item {
+        width: m.rem(6);
+        height: m.rem(6);
+        background-color: var(--color-on-surface);
+        border-radius: 100%;
+        opacity: .4;
+        font-size: 0;
+        position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: m.rem(-5);
+            left: m.rem(-5);
+            right: m.rem(-5);
+            bottom: m.rem(-5);
+        }
+
+        &_active {
+            opacity: 1;
+        }
+    }
+}

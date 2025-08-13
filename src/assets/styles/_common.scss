@@ -1,0 +1,43 @@
+// Common styles:
+
+@use './theme' as *;
+@use './vars' as *;
+@use './mixins' as m;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    text-size-adjust: none;
+}
+
+body {
+    margin: 0;
+    font-size: m.rem(16);
+    font-weight: 400;
+    font-family: var(--font-family-pt-sans);
+    color: var(--color-on-surface);
+    background-color: var(--color-surface);
+    text-rendering: optimizeLegibility;
+}
+
+// Footer to bottom:
+
+.main {
+    flex-grow: 1;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100svh;
+}
+
+#root > footer {
+    margin-top: auto;
+}

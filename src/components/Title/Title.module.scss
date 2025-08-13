@@ -1,0 +1,39 @@
+@use '../../assets/styles/mixins' as m;
+
+.Title {
+    line-height: 1.2;
+
+    &_large,
+    &_middle {
+        font-weight: 700;
+    }
+
+    &_large {
+        font-size: m.rem(20);
+
+        @include m.media_1440_min_width {
+            font-size: m.rem(56);
+        }
+    }
+
+    &_middle,
+    &_small {
+        font-size: m.rem(16);
+    }
+
+    &_middle {
+
+        @include m.media_1440_min_width {
+            font-size: m.rem(20);
+        }
+    }
+
+    &_small {
+        font-weight: 400;
+        font-family: var(--font-family-bebas-neue);
+
+        @include m.media_1440_min_width {
+            font-size: m.rem(25);
+        }
+    }
+}

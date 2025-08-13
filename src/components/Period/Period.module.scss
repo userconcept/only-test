@@ -1,0 +1,31 @@
+@use '../../assets/styles/mixins' as m;
+
+.Period {
+    display: flex;
+    gap: m.rem(26);
+
+    @include m.media_1440_min_width {
+        padding-left: m.rem(130);
+        gap: m.rem(94);
+    }
+
+    &__time {
+        font-size: m.rem(56);
+        line-height: 1;
+        font-weight: 700;
+        letter-spacing: m.rem(-1);
+
+        @include m.media_1440_min_width {
+            font-size: m.rem(200);
+            letter-spacing: m.rem(-4);
+        }
+
+        &_start {
+            color: var(--color-blue-1x);
+        }
+
+        &_end {
+            color: var(--color-pink-1x);
+        }
+    }
+}
